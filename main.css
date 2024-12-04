@@ -1,85 +1,141 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    outline: none;
-    border:none;
-   /* font:inherit; */
-    color:inherit;
-    font-family:inherit;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  /* font:inherit; */
+  color: inherit;
+  font-family: inherit;
 }
 body {
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  > li {
+    position: relative;
+  }
+  a {
+    display: block;
+    padding: 8px 14px;
+  }
+  ul {
+    position: absolute;
+    display: block;
+    transition: 0.3s;
+    opacity: 0;
+    max-height: 0;
+    visibility: hidden;
+    height: 100%;
+    list-style: none;
+    min-width: 200px;
+    left: 100%;
+
+    li {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+
+    ul {
+      left: 100%;
+      padding-left: 4px;
+      top: 0;
+    }
+  }
+
+  li:hover {
+    > a {
+      background: rgb(141, 127, 244);
+      &:after {
+        content: ">";
+      }
+    }
+    > ul {
+      visibility: visible;
+      opacity: 1;
+      max-height: 2000px;
+    }
+  }
 }
 .container {
-max-width:1200px;
-margin:0 auto;
-
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-nav ul, nav button, nav li{
-    display: inline-block;
-   
+nav ul,
+nav button,
+nav li {
+  display: inline-block;
 }
 
 nav li {
-    margin:0 25px;
-    padding-bottom: 25px;
-    border-bottom:2px solid green;
-    text-align: center;
-   
+  margin: 0 25px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid green;
+  text-align: center;
 }
- nav ul {
-    list-style: none;
-    text-align: center;
-    width: 70%;
-    margin:10px;
-   
- }
+nav ul {
+  list-style: none;
+  text-align: center;
+  width: 70%;
+  margin: 10px;
+}
 
-section .container{
-    margin-top: 12px;
-    background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
-    padding:68px 43px ;
+section .container {
+  margin-top: 12px;
+  background: linear-gradient(
+    97.77deg,
+    rgba(245, 245, 245, 0.5) -23.46%,
+    rgba(245, 245, 245, 0.5) 107.51%
+  );
+  padding: 68px 43px;
 }
- 
+
 section .left-side {
-display: inline-block;
-vertical-align: top;
-max-width: 50%;
-padding:68px 43px ;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 50%;
+  padding: 68px 43px;
 }
 
 section .right-side {
-    max-width: 50%;
-    float:right;
+  max-width: 50%;
+  float: right;
 }
-.s {color:green
+.s {
+  color: green;
 }
 .login {
-    background-color:green;
-    color:white;
-    padding: 7px 8px 7px 17px;
-    float:right;
-    border-radius: 8px;
-    margin-top: 10px;
-   
-   }
+  background-color: green;
+  color: white;
+  padding: 7px 8px 7px 17px;
+  float: right;
+  border-radius: 8px;
+  margin-top: 10px;
+}
 .shop {
-    background-color:green;
-    color:white;
-    padding: 11px 27px 9px 26px;
-    float:left;
-    margin:61px 0px;
-    border-radius: 8px; 
+  background-color: green;
+  color: white;
+  padding: 11px 27px 9px 26px;
+  float: left;
+  margin: 61px 0px;
+  border-radius: 8px;
 }
 .logo {
-margin-top: 10px;
+  margin-top: 10px;
   vertical-align: middle;
-  float:left;
-
+  float: left;
 }
 
 h1 {
-    font-size: 55px;
+  font-size: 55px;
 }
