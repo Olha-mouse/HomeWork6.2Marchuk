@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+
   padding: 0;
   box-sizing: border-box;
   outline: none;
@@ -29,12 +29,13 @@ body {
     display: block;
     transition: 0.3s;
     opacity: 0;
-    max-height: 0;
-    visibility: hidden;
-    height: 100%;
+  
+  
     list-style: none;
     min-width: 200px;
-    left: 100%;
+    left: 0;
+    margin: 0;
+    height: auto;
 
     li {
       font-size: 14px;
@@ -71,11 +72,7 @@ body {
   margin: 0 auto;
 }
 
-nav ul,
-nav button,
-nav li {
-  display: inline-block;
-}
+
 
 nav li {
   margin: 0 25px;
@@ -84,7 +81,7 @@ nav li {
   text-align: center;
 }
 nav ul {
-  list-style: none;
+
   text-align: center;
   width: 70%;
   margin: 10px;
